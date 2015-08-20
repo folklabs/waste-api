@@ -1,0 +1,11 @@
+= simple_form_for(@service) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :frequency
+    = f.input :esd_id
+    = f.input :organization
+
+  .form-actions
+    = f.button :submit

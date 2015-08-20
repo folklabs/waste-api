@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @service.name
+%p
+  %b Frequency:
+  = @service.frequency
+%p
+  %b Esd:
+  = @service.esd_id
+%p
+  %b Organization:
+  = @service.organization
+
+= link_to 'Edit', edit_service_path(@service)
+\|
+= link_to 'Back', services_path
