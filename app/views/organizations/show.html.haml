@@ -1,9 +1,17 @@
 %p#notice= notice
 
-%p
-  %b Name:
-  = @organization.name
+.row
+  .columns.large-12
+    %h1= @organization.name
 
-= link_to 'Edit', edit_organization_path(@organization)
-\|
-= link_to 'Back', organizations_path
+    %p
+      %b Name:
+      = @organization.name
+
+    - @organization.services.each do |service|
+      .panel
+        %h3= service.name
+
+    = link_to 'Edit', edit_organization_path(@organization)
+    \|
+    = link_to 'Back', organizations_path

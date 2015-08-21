@@ -1,0 +1,29 @@
+---
+- shape: wheelie bin
+  size: 240L
+  color: black
+- shape: wheelie bin
+  size: 240L
+  color: brown
+- shape: wheelie bin
+  size: 240L
+  color: green
+- shape: wheelie bin
+  size: 240L
+  color: black
+  lid_color: green
+- shape: caddy
+  size: 60L
+  color: brown
+- shape: box
+  size: ?
+  color: black
+- shape: sack
+  size: ?
+  color: black
+- shape: tied plastic bag
+  size: 60L
+  color: brown
+- shape: transparent plastic bag
+  size: 60L
+  color: brown

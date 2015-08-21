@@ -1,0 +1,23 @@
+%h1 Listing material streams
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Colour
+      %th
+      %th
+      %th
+
+  %tbody
+    - @material_streams.each do |material_stream|
+      %tr
+        %td= material_stream.name
+        %td= material_stream.color
+        %td= link_to 'Show', material_stream
+        %td= link_to 'Edit', edit_material_stream_path(material_stream)
+        %td= link_to 'Destroy', material_stream, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Material stream', new_material_stream_path

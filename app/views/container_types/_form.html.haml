@@ -1,0 +1,13 @@
+= simple_form_for(@container_type) do |f|
+  = f.error_notification
+
+  .form-inputs
+    -# = f.input :shape
+    = f.label 'Shape'
+    = f.collection_radio_buttons :shape, [['wheelie bin', 'Wheelie bin'] ,['caddy', 'Caddy'], ['box', 'Box']], :first, :last
+    = f.input :size
+    = f.input :color
+    = f.input :lid_color
+
+  .form-actions
+    = f.button :submit

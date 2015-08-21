@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Shape:
+  = @container_type.shape
+%p
+  %b Size:
+  = @container_type.size
+%p
+  %b Color:
+  = @container_type.color
+%p
+  %b Lid color:
+  = @container_type.lid_color
+
+= link_to 'Edit', edit_container_type_path(@container_type)
+\|
+= link_to 'Back', container_types_path

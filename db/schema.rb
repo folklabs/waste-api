@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150820113503) do
+ActiveRecord::Schema.define(version: 20150820165533) do
+
+  create_table "container_types", force: :cascade do |t|
+    t.string   "shape"
+    t.string   "size"
+    t.string   "color"
+    t.string   "lid_color"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "material_streams", force: :cascade do |t|
+    t.string   "name"
+    t.string   "color"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "organizations", force: :cascade do |t|
     t.string   "name"
@@ -23,10 +39,12 @@ ActiveRecord::Schema.define(version: 20150820113503) do
     t.string   "name"
     t.string   "frequency"
     t.integer  "esd_id"
-    t.string   "organization"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "organization_id"
   end
+
+  add_index "services", ["organization_id"], name: "index_services_on_organization_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

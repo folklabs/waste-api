@@ -1,0 +1,27 @@
+%h1 Listing container_types
+
+%table
+  %thead
+    %tr
+      %th Shape
+      %th Size
+      %th Color
+      %th Lid color
+      %th
+      %th
+      %th
+
+  %tbody
+    - @container_types.each do |container_type|
+      %tr
+        %td= container_type.shape
+        %td= container_type.size
+        %td= container_type.color
+        %td= container_type.lid_color
+        %td= link_to 'Show', container_type
+        %td= link_to 'Edit', edit_container_type_path(container_type)
+        %td= link_to 'Destroy', container_type, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Container type', new_container_type_path
