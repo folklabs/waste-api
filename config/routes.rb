@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace 'api' do
+    resources :services
+  end
+
   resources :container_types
   resources :material_streams
   resources :organizations
