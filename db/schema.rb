@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150820165533) do
+ActiveRecord::Schema.define(version: 20150825125644) do
 
   create_table "container_types", force: :cascade do |t|
     t.string   "shape"
@@ -20,6 +20,16 @@ ActiveRecord::Schema.define(version: 20150820165533) do
     t.string   "lid_color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "container_types_material_streams", id: false, force: :cascade do |t|
+    t.integer "container_type_id",  null: false
+    t.integer "material_stream_id", null: false
+  end
+
+  create_table "container_types_services", id: false, force: :cascade do |t|
+    t.integer "container_type_id", null: false
+    t.integer "service_id",        null: false
   end
 
   create_table "material_streams", force: :cascade do |t|

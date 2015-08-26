@@ -12,6 +12,11 @@
 %p
   %b Organization:
   = @service.organization.name
+%p
+  %b Container types:
+  %li
+    - @service.container_types.each do |ct|
+      %ul= ct
 
 = link_to 'Edit', edit_service_path(@service)
 \|

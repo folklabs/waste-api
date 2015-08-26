@@ -17,7 +17,7 @@
         %td= service.name
         %td= service.frequency
         %td= service.esd_id
-        %td= service.organization
+        %td= service.organization.name
         %td= link_to 'Show', service
         %td= link_to 'Edit', edit_service_path(service)
         %td= link_to 'Destroy', service, :method => :delete, :data => { :confirm => 'Are you sure?' }

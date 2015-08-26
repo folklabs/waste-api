@@ -12,6 +12,12 @@
 %p
   %b Lid color:
   = @container_type.lid_color
+%p
+  %b Material streams:
+  %li
+    - @container_type.material_streams.each do |stream|
+      %ul= stream.name
+
 
 = link_to 'Edit', edit_container_type_path(@container_type)
 \|

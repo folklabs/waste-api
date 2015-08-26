@@ -69,6 +69,6 @@ class ContainerTypesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def container_type_params
-      params.require(:container_type).permit(:shape, :size, :color, :lid_color)
+      params.require(:container_type).permit(:shape, :size, :color, :lid_color, material_stream_ids: [])
     end
 end
