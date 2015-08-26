@@ -1,0 +1,11 @@
+= simple_form_for(@round_plan) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :schedule
+    = f.input :start_date
+    = f.input :end_date
+
+  .form-actions
+    = f.button :submit

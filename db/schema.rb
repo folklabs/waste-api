@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150825125644) do
+ActiveRecord::Schema.define(version: 20150826141956) do
 
   create_table "container_types", force: :cascade do |t|
     t.string   "shape"
@@ -41,6 +41,15 @@ ActiveRecord::Schema.define(version: 20150825125644) do
 
   create_table "organizations", force: :cascade do |t|
     t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "round_plans", force: :cascade do |t|
+    t.string   "name"
+    t.string   "schedule"
+    t.date     "start_date"
+    t.date     "end_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

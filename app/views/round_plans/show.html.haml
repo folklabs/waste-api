@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @round_plan.name
+%p
+  %b Schedule:
+  = @round_plan.schedule
+%p
+  %b Start date:
+  = @round_plan.start_date
+%p
+  %b End date:
+  = @round_plan.end_date
+
+= link_to 'Edit', edit_round_plan_path(@round_plan)
+\|
+= link_to 'Back', round_plans_path

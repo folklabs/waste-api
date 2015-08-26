@@ -1,0 +1,27 @@
+%h1 Listing Round plans
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Schedule
+      %th Start date
+      %th End date
+      %th
+      %th
+      %th
+
+  %tbody
+    - @round_plans.each do |round_plan|
+      %tr
+        %td= round_plan.name
+        %td= round_plan.schedule
+        %td= round_plan.start_date
+        %td= round_plan.end_date
+        %td= link_to 'Show', round_plan
+        %td= link_to 'Edit', edit_round_plan_path(round_plan)
+        %td= link_to 'Destroy', round_plan, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Round plan', new_round_plan_path
