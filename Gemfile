@@ -17,11 +17,13 @@ group :development, :test do
 end
 
 gem 'devise'
+gem 'activeadmin', '~> 1.0.0.pre1'
 gem 'figaro', '>= 1.0.0.rc1'
 gem 'foundation-rails'
 gem 'haml-rails'
 gem 'high_voltage'
 gem 'simple_form'
+gem 'recurring_select'
 
 gem 'savon', '~> 2.0'
 
