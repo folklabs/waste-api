@@ -5,7 +5,7 @@
   = @round_plan.name
 %p
   %b Schedule:
-  = @round_plan.schedule
+  = IceCube::Rule.from_yaml(@round_plan.schedule).to_s
 %p
   %b Start date:
   = @round_plan.start_date

@@ -22,6 +22,7 @@ gem 'foundation-rails'
 gem 'haml-rails'
 gem 'high_voltage'
 gem 'simple_form'
+gem 'recurring_select'
 
 gem 'savon', '~> 2.0'
 
