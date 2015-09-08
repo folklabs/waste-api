@@ -6,6 +6,7 @@
     = f.select_recurring :schedule
     = f.input :start_date
     = f.input :end_date
+    = f.association :services
 
   .form-actions
     = f.button :submit

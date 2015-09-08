@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @round.name
+%p
+  %b Date:
+  = @round.date
+%p
+  %b Round plan:
+  = @round.round_plan
+
+= link_to 'Edit', edit_round_path(@round)
+\|
+= link_to 'Back', rounds_path

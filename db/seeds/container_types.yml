@@ -16,7 +16,7 @@
   size: 60L
   color: brown
 - shape: box
-  size: ?
+  size: 55L
   color: black
 - shape: sack
   size: ?

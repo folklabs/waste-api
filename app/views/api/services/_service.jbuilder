@@ -16,11 +16,19 @@ end
 json.provider service.organization, :id, :name
 
 # TODO: fix
-json.last_collection do
-  json.date '1 August 2015'
+if service.round_plans.any?
+  round = service.last_collection_round
+  json.last_collection do
+    json.date round.date.xmlschema
+    json.set! 'round', "#{request.base_url}/api/rounds/#{service.last_collection_round.id}"
+    # json.set! '@type', 'WasteCollection'
+    json.events round.events do |event|
+      json.set! 'type', event.event_type
+      json.(event, :uprn, :image)
+    end
+  end
+  json.next_collection do
+    json.date service.next_collection
+    # json.set! '@type', 'WasteCollection'
+  end
 end
-
-json.next_collection do
-  json.date '15 August 2015'
-end
-

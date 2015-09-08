@@ -69,6 +69,6 @@ class RoundPlansController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def round_plan_params
-      params.require(:round_plan).permit(:name, :schedule, :start_date, :end_date)
+      params.require(:round_plan).permit(:name, :schedule, :start_date, :end_date, service_ids: [])
     end
 end

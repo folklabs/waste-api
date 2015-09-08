@@ -16,7 +16,7 @@ unless User.first
 end
 
 puts 'Loading material streams'
-csv = CSV.open((Rails.root, 'db', 'seeds', 'material_streams.csv'), :headers => true, :header_converters => :symbol)
+csv = CSV.open(File.join(Rails.root, 'db', 'seeds', 'material_streams.csv'), :headers => true, :header_converters => :symbol)
 config = csv.to_a.map {|row| row.to_hash }
 config = config.each {|h| h.delete(:parent) }
 MaterialStream.create!(config) do |c|
@@ -26,7 +26,8 @@ end
 
 models = [
   { name: 'organizations', _class: Organization },
-  { name: 'container_types', _class: ContainerType }
+  { name: 'container_types', _class: ContainerType },
+  { name: 'services', _class: Service },
 ]
 
 models.each do |model|

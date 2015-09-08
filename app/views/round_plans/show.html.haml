@@ -4,6 +4,10 @@
   %b Name:
   = @round_plan.name
 %p
+  %b Services:
+  - @round_plan.services.each do |s|
+    = s.name
+%p
   %b Schedule:
   = IceCube::Rule.from_yaml(@round_plan.schedule).to_s
 %p

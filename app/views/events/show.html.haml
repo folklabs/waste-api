@@ -1,0 +1,19 @@
+%p#notice= notice
+
+%p
+  %b Event type:
+  = @event.event_type
+%p
+  %b Image:
+  %img{"src"=> "#{@event.image}?dl=0"}
+%p
+  %b Uprn:
+  = @event.uprn
+%p
+  %b Round:
+  = @event.round.name
+
+= link_to 'Edit', edit_event_path(@event)
+\|
+= link_to 'Back', events_path
+

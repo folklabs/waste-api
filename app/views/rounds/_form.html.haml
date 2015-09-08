@@ -1,0 +1,10 @@
+= simple_form_for(@round) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :date
+    = f.association :round_plan
+
+  .form-actions
+    = f.button :submit
