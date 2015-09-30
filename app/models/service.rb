@@ -21,4 +21,8 @@ class Service < ActiveRecord::Base
     dates = self.round_plans.map { |rp| rp.next_collection }
     next_date = dates.min
   end
+
+  def to_s
+    name
+  end
 end

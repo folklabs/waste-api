@@ -1,0 +1,34 @@
+---
+- name: Non-recyclable waste
+  organization: Luton Borough Council
+  frequency: weekly
+  container_types:
+    - 240L black wheelie bin
+  description: |
+    Black bins/sacks are collected weekly, except during public holidays.
+    Changes to collections will be advertised well in advance here and in the local press
+    We only take rubbish that is inside your bin - anything else left near the bin will not be collected.
+
+- name: Recycling
+  organization: Luton Borough Council
+  frequency: fortnightly
+  container_types:
+    - 240L green wheelie bin
+  description: |
+    Green bins/clear sacks/red recycling bins for flats are collected fortnightly. Follow this link to see when your bins are collected.
+
+- name: Garden waste
+  organization: Luton Borough Council
+  frequency: fortnightly
+  container_types:
+    - 240L brown wheelie bin
+  description: |
+    Brown bins are collected fortnightly from March - November.
+
+- name: Glass
+  organization: Luton Borough Council
+  frequency: fortnightly
+  container_types:
+    - 55L black box
+  description: |
+    Black box is collected fortnightly on the same day as your green recycling bin.

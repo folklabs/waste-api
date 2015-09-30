@@ -2,12 +2,15 @@
 - shape: wheelie bin
   size: 240L
   color: black
+  # image: wrap_wheeliebin_grey_rc021_60px.png
 - shape: wheelie bin
   size: 240L
   color: brown
+  # image: wrap_wheeliebin_brown_rc009_60px.png
 - shape: wheelie bin
   size: 240L
   color: green
+  # image: wrap_wheeliebin_green_rc019_60px.png
 - shape: wheelie bin
   size: 240L
   color: black
@@ -15,15 +18,18 @@
 - shape: caddy
   size: 60L
   color: brown
+  # image: wrap_caddy_brown_60px.png
 - shape: box
   size: 55L
   color: black
+  # image: wrap_box_red_rc13_60px.png
 - shape: sack
-  size: ?
+  size: 30L
   color: black
 - shape: tied plastic bag
   size: 60L
   color: brown
 - shape: transparent plastic bag
   size: 60L
-  color: brown
+  color: clear
+  # image: 
