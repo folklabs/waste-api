@@ -25,6 +25,7 @@ gem 'simple_form'
 gem 'recurring_select'
 
 gem 'savon', '~> 2.0'
+gem 'tripod'
 
 group :development do
   gem 'better_errors'
